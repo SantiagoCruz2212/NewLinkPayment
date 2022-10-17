@@ -1,0 +1,12 @@
+.container{
+    position: fixed;
+    bottom: 0px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(2,0,36,0.5) 100%);
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+}
+.cntr-link, .cntr-info-link{
+    background-color: #FFFFFF;
+}
