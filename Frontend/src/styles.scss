@@ -1,0 +1,14 @@
+@font-face{
+    font-family: FirstFont;
+    src: url(./assets/fonts/AmpleSoftPro-Regular.woff2);
+}
+body{
+    margin: 0px;
+    font-family: FirstFont;
+}
+button, select{
+    font-family: inherit;
+}
+input::placeholder{
+    font-family: FirstFont;
+}

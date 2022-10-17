@@ -1,0 +1,202 @@
+article{
+    padding: 10px 4%;
+}
+button{
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+figure{
+    margin: 0px;
+    width: 100%;
+    height: 39px;
+    background-color: #EEEEF5;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h2{
+    color: #253D90;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 2px 0px 2px 0px;
+}
+p{
+    font-size: 15px;
+    font-weight: 600;
+    color: #504E5C;
+    margin: 0px;
+    margin-bottom: 6px;
+}
+.buttons{
+    padding: 10px 6%;
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px #DEDEE8 solid;
+}
+.copy{
+    width: 20px;
+    height: 22px; 
+    margin-right: 1px;
+}
+.link{
+    margin-left: 5%;
+    font-size: 16px;
+    font-weight: 400;
+}
+.link-created{
+    position: relative;
+    border: 1px #DEDEE8 solid;
+    border-radius: 10px;
+    margin: 10px 8% 10px 10%;
+    width: 84%;
+    background-color: #FFFFFF;
+}
+.price{
+    position: absolute;
+    top: 17px;
+    right: 14px;
+    width: 85px;
+    height: 28px;
+    background-color: transparent;
+    border: 1px #253D90 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.price p{
+    color: #253D90;
+    font-weight: 600;
+    margin: 0px;
+}
+.buttons .delete{
+    transition: 400ms;
+    color: #787878;
+}
+.buttons .modify{
+    color: #54B7FF;
+    transition: 400ms;
+}
+.delete svg{
+    transition: 400ms;
+    fill: #787878;
+    margin-right: 5px;
+}
+.buttons .delete:hover{
+    transition: 400ms;
+    color: #ff217a;
+}
+.buttons .modify:hover{
+    transition: 400ms;
+    color: #323F8D;
+}
+.delete:hover{
+    svg{
+        fill: #ff217a;
+        transition: 400ms;
+    }
+}
+@media (max-width:1600px) {
+    figure{
+        height: 37px;
+    }
+    .link-created figure p{
+        font-size: 14px;
+    }
+}
+@media (max-width:1450px) {
+    button{
+        font-size: 16px;
+    }
+    figure{
+        height: 35px;
+    }
+    h2{
+        font-size: 17px;
+    }
+    p{
+        font-size: 13px;
+    }
+    .link-created figure p{
+        font-size: 13px;
+    }
+    .price{
+        right: 13px;
+    }
+}
+@media (max-width:1300px) {
+    button{
+        font-size: 15px;
+    }
+    figure{
+        height: 33px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .link-created figure p{
+        font-size: 12px;
+    }
+    .price{
+        top: 15px;
+        right: 12px;
+        width: 75px;
+        height: 25px;
+    }
+}
+[slot] {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+}
+[slot]::before{
+    content: attr(slot);
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+
+    display: block;
+    padding: 7px 10px;
+    width: 100px;
+    box-shadow: 0px 2px 5px #0000008c;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+[slot]:hover::before{
+    transform: translate(0);
+    opacity: 1;
+}
+.copySpan::before{
+    top: -180%;
+    right: 0%;
+    left: auto;
+    transform: translateX(20px);
+    background: #504E5C;
+}
+.copiedSpan::before{
+    background-color: #146900;
+    animation: byebye 2s linear 1 forwards;
+}
+@keyframes byebye {
+80%{
+    opacity: 1;
+}   
+100%{
+    opacity: 0;
+} 
+}
